@@ -1,0 +1,11 @@
+<html>
+  <head><title>Cafe List</title></head>
+  <body>
+    <h1>List of Cafes</h1>
+    <ol>
+    <% for(var i = 0; i < cafes.length; i++){ %>
+      <li><%= cafes[i].name %></li>
+    <% } %>
+    </ol>
+  </body>
+</html>

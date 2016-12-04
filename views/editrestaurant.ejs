@@ -1,0 +1,17 @@
+<html>
+	<body>
+		<form action="./editrest" method="POST"  enctype="multipart/form-data"  id="new">
+			<input type="hidden" id="id" name="id" value="<%= restaurant._id %>">
+			Name:<input type="text" id="name" name="name" value="<%= restaurant.name %>"><br/>
+			Cuisine:<input type="text" id="cuisine" name="cuisine" value="<%= restaurant.cuisine %>"><br/>
+			Street:<input type="text" id="street" name="street" value="<%= restaurant.street %>"><br/>
+			Building:<input type="text" id="building" name="building" value="<%= restaurant.building %>"><br/>
+			ZipCode:<input type="text" id="zipcode" name="zipcode" value="<%= restaurant.zipcode %>"><br/>
+			GPS Coordinates (lon.):<input type="text" id="lon" name="lon" value="<%= restaurant.lon %>"><br/>
+			GPS Coordinates (lat.):<input type="text" id="lat" name="lat" value="<%= restaurant.lat %>"><br/>
+			Photo:<input type="file" id="photo" name="photo"><br/>
+			<input type="submit" value="Edit">
+		</form>
+		<a href="/showdetail?id=<%= restaurant._id %>">Go back</a>
+	</body>
+</html>

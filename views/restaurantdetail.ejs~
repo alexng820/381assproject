@@ -1,0 +1,22 @@
+<html>
+  <body>
+	<img src="<%=imgsrc%>"  height="100" width="200"> <br/>
+	Name : <%=restaurant.name%><br/>
+	Cuisine : <%=restaurant.cuisine%><br/>
+	Street : <%=restaurant.street%><br/>
+	Building : <%=restaurant.building%><br/>
+	ZipCode : <%=restaurant.zipcode%><br/>
+	GPS Coordinates (lon.) : <%=restaurant.lon%><br/>
+	GPS Coordinates (lat.) : <%=restaurant.lat%><br/>
+	Create By : <%=restaurant.createby%><br/>
+	<% if(restaurant.rate!=null){ %>
+	Rate:<br/>
+	<% for(var i = 0; i < restaurant.rate.length; i++){ %>
+	      <li><%=restaurant.rate[i].score %> By <%= restaurant.rate[i].by %></a></li>
+	<% }} %>
+	<a href="./rate?id=<%=restaurant._id%>">Rate</a>
+	<a href="./edit?id=<%=restaurant._id%>">Edit</a>
+	<a href="./delete?id=<%=restaurant._id%>">Delete</a>
+	<a href="./">Go Back</a>
+  </body>
+</html>

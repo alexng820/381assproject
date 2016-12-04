@@ -1,0 +1,30 @@
+<html>
+  <head> 
+    <title>Google Map Example</title>
+    <link rel="stylesheet" type="text/css" href="layout.css">
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript">
+      var loadMap = function(){
+        var myLatLng = {lat: <%=coord[0]%>, lng: <%=coord[1]%>};
+        var map = new google.maps.Map(document.getElementById("map"),{
+          zoom: 18, center: myLatLng
+        }); 
+        var map = new google.maps.Marker({
+          position: myLatLng, map: map, title: '<%=name%>'
+        });
+      };
+      window.onload= loadMap;
+    </script>
+  </head>
+  <body>
+    <header><h1><%= name %></h1></header>
+    <nav>Vistors<br>About Us<br></nav>
+    <section>
+      <p>ID: <%=id%></p>
+      <p>Seats: <%=seats%></p>
+    </section>
+    <aside>
+      <div id="map" style="width:500px;height:500px;">
+    </aside>
+  </body>
+</html>

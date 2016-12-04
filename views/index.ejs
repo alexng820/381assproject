@@ -1,0 +1,11 @@
+<html>
+	<body>
+			<label>Welcome back <%=user.username%> </label>
+			<a href="./logout">Logout</a><br/>
+			<% for(var i = 0; i < restaurants.length; i++){ %>
+			      <li><a href="/showdetail?id=<%= restaurants[i]._id %>"><%=i+1 %> . <%= restaurants[i].name %></a></li>
+			<% } %>
+			<a href="./new">New</a><br/>
+			
+	</body>
+</html>

@@ -1,0 +1,6 @@
+<html>
+	<body>
+			<label>You don't have permission to modify or delete</label>
+			<a href="/showdetail?id=<%= id %>">Go back</a>
+	</body>
+</html>
